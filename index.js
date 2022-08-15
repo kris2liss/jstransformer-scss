@@ -37,7 +37,7 @@ exports.renderAsync = function (str, options) {
 }
 
 exports.renderFile = function (filename, options) {
-  const input = extend({}, options, {
+  const input = extend({ outputStyle: 'nested' }, options, {
     file: path.resolve(filename)
   })
   // TODO: Replace with sass.compile()
